@@ -1,0 +1,16 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#main-page-background {
+    background-image: url("image/background.jpg");
+    background-size: cover;
+    background-position: center 84%;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
