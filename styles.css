@@ -4,6 +4,20 @@ body, html {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    opacity: 0;
+    animation: fadein 3s forwards;
+    background-image: url("image/background.jpg");
+    background-position: center 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 @media (max-width: 600px) {
     body {
@@ -17,7 +31,6 @@ body, html {
 }
 .main-police {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
 }
 /*CONTAINER PRINCIPAL*/
 #container {
@@ -27,7 +40,7 @@ body, html {
 #left-part {
     width: 200px;
     height: 100vh; /* 100% de la hauteur de la fenêtre */
-    background-color: white; /* Bleu pour voir l'effet */
+    background-color: rgb(255, 241, 221);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,8 +48,11 @@ body, html {
 #nom {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 2px;
+    color: rgb(183, 52, 52);  
 }
 #menu {
+    margin-top: auto;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -46,7 +62,10 @@ body, html {
     text-align: left;
 }
 .lien-menu {
+    color: grey;
     text-decoration: none;
+}
+.lien-menu:hover {
     color: black;
 }
 .lien-menu:hover {
@@ -56,10 +75,14 @@ body, html {
 #instagram-logo {
     height: 20px;
     width: 20px;
+    margin: 0;
+}
+#instagram-logo:hover {
+    transform: scale(1.1);
 }
 #lien-instagram {
     margin-bottom: 10px;
-    margin-top: auto;
+    margin-top: 0;
 }
 #copyright {
     font-family: 'Courier New', Courier, monospace;
@@ -67,44 +90,39 @@ body, html {
     text-align: center;
 }
 /* IMAGE MILIEU*/
-#image-mid {  
+#separateur {  
     flex: 1;
-    background-color: white; 
-}
-
-#image {
-    background-image: url("image/femme-bleue.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    padding: 20px;
 }
 /* PARTIE DROITE - TEXTE*/
 #texte {
     flex: 1;
-    background-color: rgb(255, 241, 221);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 15px 15px 15px 15px;
 }
-#button-setting {
-    margin-top: 30px;
-    background-color: white;
-    border: none;
-    border-radius: 8px; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    box-shadow: none;
+.hover-english-color {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    opacity: 20%;
 }
-#button-setting:active {
-    outline: none;
-    box-shadow: none;
+.hover-english-color:hover {
+    color: white;
+    transition: 0.3s;
+    opacity: 100%;
 }
-#button-setting:hover {
-    transform: scale(1.1);
-    transition: 1s;
+#fleche {
+    height: 45px;
+    width: 45px;
+    rotate: 270deg;
+    animation: fade 2s infinite;
+}
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 75%; }
+}
+.fontcolor {
+    color: white;
 }
