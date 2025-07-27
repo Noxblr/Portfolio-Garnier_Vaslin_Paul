@@ -3,10 +3,12 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    
-    display: flex;
     opacity: 0;
     animation: fadein 3s forwards;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 @keyframes fadein {
     from {
@@ -24,11 +26,10 @@ body, html {
 /*LEFT PART*/
 #left-part {
     height: 100vh;
-    width: 230px;
+    width: 200px;
     overflow: hidden;
     position: fixed;
     display: flex;
-    
 }
 #left-part-content:hover {
     opacity: 1;
@@ -42,22 +43,22 @@ body, html {
 }
 #left-part-content {
     height: 100vh;
-    width: 20px;
+    width: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(255, 241, 221);
     opacity: 0;
 }
-#logo-link {
-    text-decoration: none;
-}
+
 #button-part {
+    position: absolute;
     height: 100vh;
     width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
 }
 #arrow {
     height: 30px;
@@ -65,7 +66,7 @@ body, html {
     animation: slidein 1.5s infinite;
     rotate: 180deg;
 }
-@keyframes slidein {
+    @keyframes slidein {
     from {
         transform: translateX(-2px);
         opacity: 50%;
@@ -76,6 +77,9 @@ body, html {
     }
 }
 /* content*/
+#logo-link {
+    text-decoration: none;
+}
 #nom {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 2px;
@@ -130,6 +134,7 @@ body, html {
     flex-direction: column;
 }
 #top-container {
+    height: 100px;
     background-image: url("../image/background.jpg");
     background-position: center ;
     background-repeat: no-repeat;
@@ -137,7 +142,6 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 #title-container {
     display: flex;
@@ -159,3 +163,8 @@ body, html {
     margin: 0;
 }
 /*instagram embed*/
+#provisoire {
+    background-color: blue;
+    height: 500px;
+    width: 100%;
+}
