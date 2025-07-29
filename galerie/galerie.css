@@ -1,0 +1,252 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    animation: fadein 3s forwards;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@media (max-width: 600px) {
+    body {
+        display: none; /* Cache tout le contenu du body */
+    }
+}
+/*LEFT PART*/
+#left-part {    
+    height: 100vh;
+    width: 230px;
+    position: fixed;
+    display: flex;
+    z-index: 2;
+}
+#left-part-content:hover {
+    opacity: 1;
+    transition: 0.5s;
+    height: 100vh;
+    width: 200px;
+}
+#left-part-content:hover ~ #button-part {
+    opacity: 0;
+    transition: 0.5s;
+}
+#left-part-content {
+    height: 100vh;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 241, 221);
+    opacity: 0;
+}
+#logo-link {
+    text-decoration: none;
+}
+#button-part {
+    position: absolute;
+    height: 100vh;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+#arrow {
+    height: 30px;
+    width: 30px;
+    animation: slidein 1.5s infinite;
+    rotate: 180deg;
+}
+@keyframes slidein {
+    from {
+        transform: translateX(-2px);
+        opacity: 50%;
+    }
+    to {
+        transform: translateX(2px);
+        opacity: 100%;
+    }
+}
+/* left part content*/
+#nom {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    color: rgb(183, 52, 52);  
+}
+#menu {
+    margin-top: auto;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.bouton-menu {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    text-align: left;
+}
+.lien-menu {
+    color: grey;
+    text-decoration: none;
+}
+.lien-menu:hover {
+    color: black;
+}
+.lien-menu:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+#instagram-logo {
+    height: 20px;
+    width: 20px;
+    margin: 0;
+}
+#instagram-logo:hover {
+    transform: scale(1.1);
+}
+#lien-instagram {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+#copyright {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    text-align: center;
+}
+/* CONTENU GENERAL*/
+/*index*/
+#index {
+    z-index: 1;
+}
+/*top container*/
+#top-container {
+    height: 100px;
+    width: 100%;
+    background-image: url("../image/background.jpg");
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#title {
+    color: white;
+    font-size: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+    text-shadow: 4px 4px 10px black;
+    transition: 0.5s;
+}
+#title:hover {
+    transform: scale(1.01);
+}
+/*middle content */
+#entete-menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    margin: 50px 0 50px 0; 
+}
+.portrait-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 300px;
+    width: 240px;
+    transition: 0.2s;
+}
+#image-gauche {
+    height: 300px;
+    width: 240px;
+    border-radius: 1%;
+}
+#portraittext {
+    position: absolute;
+    width: 180px;
+    margin: 0;
+    filter: drop-shadow(2px 4px 6px black);
+}
+#image-milieu {
+    background-image: url("../image/bateaupeinture.JPEG");
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 240px;
+    border-radius: 1%;
+}
+#paysagetext {
+    position: absolute;
+    width: 150px;
+    margin: 0;
+    filter: drop-shadow(2px 4px 6px black);
+}
+#image-droite {
+    height: 300px;
+    width: 240px;
+    border-radius: 1%;
+}
+#croquistext {
+    position: absolute;
+    width: 150px;
+    margin: 0;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 1%;
+}
+.portrait-container:hover .overlay {
+    opacity: 1;
+}
+.portrait-container:hover {
+    transform: scale(1.01);
+}
+#parametre-text-presentation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#text-presentation {
+    width: 600px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(83, 83, 83);
+    font-size: large;
+    margin: 0;
+    transition: 0.3s;
+}
+#text-presentation:hover {
+    color: black;
+}
+#bottom-femme-montagne {
+    height: 200px;
+    width: 100%;
+    bottom: 0;
+    background-image: url("../image/montagneverticale.jpg");
+    background-size: cover;
+    background-position: center 100%;
+    opacity: 0.5;
+}
