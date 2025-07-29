@@ -157,9 +157,10 @@ body, html {
 /*middle content */
 #entete-menu {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
-    gap: 20px;
+    gap: 5px;
     margin: 50px 0 50px 0; 
 }
 .portrait-container {
@@ -167,43 +168,49 @@ body, html {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 300px;
-    width: 240px;
+    height: 150px;
+    width: 100%;
     transition: 0.2s;
 }
 #image-gauche {
-    height: 300px;
-    width: 240px;
-    border-radius: 1%;
+    background-image: url("../image/hommeregard.JPEG");
+    background-position: center 48%;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    border-radius: 2%;
 }
 #portraittext {
     position: absolute;
-    width: 180px;
+    width: 200px;
     margin: 0;
     filter: drop-shadow(2px 4px 6px black);
 }
 #image-milieu {
     background-image: url("../image/bateaupeinture.JPEG");
-    background-position: center;
+    background-position: center 35%;
     background-size: cover;
-    height: 300px;
-    width: 240px;
-    border-radius: 1%;
+    height: 150px;
+    width: 100%;
+    border-radius: 2%;
 }
 #paysagetext {
     position: absolute;
-    width: 150px;
+    width: 200px;
     margin: 0;
     filter: drop-shadow(2px 4px 6px black);
 }
 #image-droite {
-    height: 300px;
-    width: 240px;
-    border-radius: 1%;
+    background-image: url("../image/oeil.jpg");
+    background-position: center 35%;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    border-radius: 2%;
 }
 #croquistext {
     position: absolute;
-    width: 150px;
+    width: 200px;
     margin: 0;
     filter: drop-shadow(2px 4px 6px black);
 }
@@ -216,13 +223,10 @@ body, html {
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: 0.3s;
-    border-radius: 1%;
+    border-radius: 2%;
 }
 .portrait-container:hover .overlay {
     opacity: 1;
-}
-.portrait-container:hover {
-    transform: scale(1.01);
 }
 #parametre-text-presentation {
     display: flex;
@@ -230,12 +234,12 @@ body, html {
     margin-bottom: 50px;
 }
 #text-presentation {
-    width: 600px;
+    width: 100%;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(83, 83, 83);
     font-size: large;
-    margin: 0;
+    margin: 0 20px 0 20px;
     transition: 0.3s;
 }
 #text-presentation:hover {
@@ -248,5 +252,5 @@ body, html {
     background-image: url("../image/montagneverticale.jpg");
     background-size: cover;
     background-position: center 100%;
-    opacity: 0.5;
+    opacity: 0.25;
 }
